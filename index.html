@@ -8,10 +8,37 @@
     <meta name="Description" content="Enter your description here" />
     <!-- added bootstrap cdn -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+    <!-- add custom css -->
+    <link rel="stylesheet" href="css/style.css">
     <title>Title</title>
 </head>
 
 <body>
+
+    <main>
+        <header>
+
+        </header>
+
+
+        <section class="container mt-3">
+            <h1 class="text-center text-success">Search your favorite book</h1>
+            <div class="input-group mb-3 w-50 mx-auto mt-4">
+                <input id="search-field" type="text" class="form-control" placeholder="Search your book here"
+                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                <button class="btn btn-danger" type="button" onclick="loadBook()" id="search-button">Search</button>
+            </div>
+
+
+            <!-- <div>
+        <p id="error-message" class=" text-danger">Something went wrong please try again later</p>
+    </div> -->
+
+            <!-- Book search result -->
+            <div id="search-result" class="row row-cols-1 row-cols-md-4 g-4">
+            </div>
+        </section>
+    </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
