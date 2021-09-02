@@ -7,27 +7,31 @@ const searchBook = () => {
         document.getElementById('error-message').innerText = `
             Search field cann't empty.
         `;
-        displaySpinner('none');
+        //set spinner display none
+        toggleSpinner('none');
+        //clear result and error messege
         toggleSearchResult('none');
         getInnerText('total-found');
         getInnerText('show');
     } else {
         // display spinner
-        displaySpinner('block');
+        toggleSpinner('block');
         toggleSearchResult('none');
         loadBooks(searchText);
+        //clear input field
         document.getElementById('search-field').value = '';
+        //clear result and error messege
         getInnerText('error-message');
         getInnerText('total-found');
         getInnerText('show');
     }
 }
-// function for common empty innertext 
+// function for set common empty innertext 
 const getInnerText = id => {
     document.getElementById(id).innerText = '';
 }
 //show spinner function
-const displaySpinner = displayStyle => {
+const toggleSpinner = displayStyle => {
     document.getElementById('spinner').style.display = displayStyle;
 }
 // function for toggle search result
@@ -78,6 +82,7 @@ const displayBooks = books => {
         `;
         searchResult.appendChild(divCol);
     });
-    displaySpinner('none');
+    //clere sppiner and push search result
+    toggleSpinner('none');
     toggleSearchResult('flex');
 }
