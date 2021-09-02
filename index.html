@@ -10,12 +10,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
     <!-- add custom css -->
     <link rel="stylesheet" href="css/style.css">
-    <title>Title</title>
+    <title>Book Archive</title>
 </head>
 
 <body>
     <section class="container mt-3">
-        <h1 class="text-center">Welcome to Book Archive</h1>
+        <h1 class="text-center">Welcome to Open Library</h1>
         <!-- search button -->
         <div class="input-group mb-3 w-50 mx-auto mt-4">
             <input id="search-field" type="text" class="form-control" placeholder="Search your book here"
@@ -24,13 +24,13 @@
         </div>
 
         <!-- total result number -->
-        <div>
-            <p id="total-found" class="text-center"></p>
+        <div class="w-50 mx-auto mb-4">
+            <h3 class="text-center"> <span id="show"></span> <span id="total-found"></span></h3>
         </div>
 
         <!-- Book search result -->
         <div>
-            <div id="search-result" class="row row-cols-1 row-cols-md-4 g-4">
+            <div id="search-result" class="row row-cols-1 row-cols-md-3 g-4 text-center">
             </div>
         </div>
 
