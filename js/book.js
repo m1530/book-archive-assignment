@@ -5,11 +5,12 @@ const searchBook = () => {
     //validation for empty value
     if (searchText === '') {
         document.getElementById('error-message').innerText = `
-            Search field cann't empty. please write valid book name.
+            Search field cann't empty.
         `;
         displaySpinner('none');
         toggleSearchResult('none');
         getInnerText('total-found');
+        getInnerText('show');
     } else {
         // display spinner
         displaySpinner('block');
@@ -18,6 +19,7 @@ const searchBook = () => {
         document.getElementById('search-field').value = '';
         getInnerText('error-message');
         getInnerText('total-found');
+        getInnerText('show');
     }
 }
 // function for common empty innertext 
@@ -56,7 +58,7 @@ const displayBooks = books => {
     }
     //make slice and show 35 books
     const lessBook = books.slice(0, 35);
-    document.getElementById('show').innerText = `Total Shows ${lessBook.length}`;
+    document.getElementById('show').innerText = `Shown ${lessBook.length}`;
     lessBook?.forEach(book => {
         //console.log(book)
         book.cover_i ? cover = `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg` : cover = `image/1.jpg`;
