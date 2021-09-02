@@ -14,31 +14,38 @@
 </head>
 
 <body>
+    <section class="container mt-3">
+        <h1 class="text-center">Welcome to Book Archive</h1>
+        <!-- search button -->
+        <div class="input-group mb-3 w-50 mx-auto mt-4">
+            <input id="search-field" type="text" class="form-control" placeholder="Search your book here"
+                aria-label="Recipient's username" aria-describedby="button-addon2">
+            <button class="btn btn-danger" type="button" onclick="searchBook()">Search</button>
+        </div>
 
-    <main>
-        <header>
+        <!-- total result number -->
+        <div>
+            <p id="total-found" class="text-center"></p>
+        </div>
 
-        </header>
-
-
-        <section class="container mt-3">
-            <h1 class="text-center text-success">Search your favorite book</h1>
-            <div class="input-group mb-3 w-50 mx-auto mt-4">
-                <input id="search-field" type="text" class="form-control" placeholder="Search your book here"
-                    aria-label="Recipient's username" aria-describedby="button-addon2">
-                <button class="btn btn-danger" type="button" onclick="loadBook()" id="search-button">Search</button>
-            </div>
-
-
-            <!-- <div>
-        <p id="error-message" class=" text-danger">Something went wrong please try again later</p>
-    </div> -->
-
-            <!-- Book search result -->
+        <!-- Book search result -->
+        <div>
             <div id="search-result" class="row row-cols-1 row-cols-md-4 g-4">
             </div>
-        </section>
-    </main>
+        </div>
+
+        <!-- show error messege -->
+        <div>
+            <p id="error-message" class=" text-danger">
+            </p>
+        </div>
+        <!-- show spinner -->
+        <div class="d-flex justify-content-center">
+            <div id="spinner" class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
